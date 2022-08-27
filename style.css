@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,500;1,200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#main {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgb(0, 179, 255), rgb(1, 15, 36));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player {
+    width: 40rem;
+    height: 60rem;
+    background-color: rgb(195, 203, 203);
+    border-radius: 2rem;
+    box-shadow: 0 0 1.5rem 0 white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#songName {
+    font-size: 5rem;
+    font-family: poppins;
+    margin-bottom: 5rem;
+}
+
+#ArtistName {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    font-family: poppins;
+    font-weight:lighter;
+}
+
+#image {
+    width: 25rem;
+    height: 25rem;
+    box-shadow: -1rem -1rem 3rem 0 rgb(255, 255, 255),1rem 1rem 3rem 0 rgb(72, 71, 71);
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outerCircle{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    /* border: .2rem solid red; */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -0.5rem -0.5rem 1rem 0 rgb(245, 245, 245) ,.5rem .5rem 1rem 0 rgb(97, 96, 96);
+    /* box-shadow: -0.5rem -0.5rem 1rem 0 rgb(72, 71, 71),.5rem .5rem 1rem 0 rgb(255, 255, 255) ; */
+
+}
+.innerCircle{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    /* border: .2rem solid red; */
+    background: url(./picture/Picture0.jpg);
+    filter: grayscale(80%);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    /* box-shadow: -0.5rem -0.5rem 1rem 0 rgb(236, 233, 233) inset,.5rem .5rem 1rem 0 rgb(100, 99, 99) inset ; */
+    /* box-shadow: -0.5rem -0.5rem 1rem 0 rgb(72, 71, 71),.5rem .5rem 1rem 0 rgb(255, 255, 255) ; */
+}
+.Rotate{
+    animation: rotate 5s infinite linear;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#controlls {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-top: 5rem;
+    align-items: center;
+
+}
+.prev-track,.next-track,.playpause-track{
+    cursor: pointer;
+}
