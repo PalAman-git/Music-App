@@ -100,6 +100,7 @@ html {
     justify-content: space-between;
     margin-top: 5rem;
     align-items: center;
+    transition: all .5s;
 
 }
 .prev-track,.next-track,.playpause-track{

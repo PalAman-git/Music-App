@@ -4,6 +4,7 @@ const PrevButton = document.querySelector(".prev-track");
 const PlayPauseButton = document.querySelector(".playpause-track");
 const nextButton = document.querySelector(".next-track");
 const InnerImage = document.getElementById("innerCircle");
+const centerButton=document.querySelector('.centerButton');
 let random = Math.floor(Math.random() * 4);
 let i;
 i = random;
@@ -24,9 +25,14 @@ const play = () => {
   if (currentsong.paused || currentsong.currentTime == 0) {
     currentsong.play();
     InnerImage.classList.add("Rotate");
+    centerButton.classList.remove('fa-play-circle');
+    centerButton.classList.add('fa-pause-circle');
   } else {
     InnerImage.classList.remove("Rotate");
+    centerButton.classList.remove('fa-pause-circle');
+    centerButton.classList.add('fa-play-circle');
     currentsong.pause();
+
   }
   
 
