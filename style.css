@@ -69,12 +69,12 @@ html {
     /* box-shadow: -0.5rem -0.5rem 1rem 0 rgb(72, 71, 71),.5rem .5rem 1rem 0 rgb(255, 255, 255) ; */
 
 }
-.innerCircle{
+#innerCircle{
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
     /* border: .2rem solid red; */
-    background: url(./picture/Picture0.jpg);
+    background-image: url(./picture/Picture0.jpg);
     filter: grayscale(80%);
     background-position: center;
     background-size: cover;

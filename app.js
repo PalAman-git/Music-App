@@ -3,6 +3,7 @@ const ArtistName = document.querySelector("#ArtistName");
 const PrevButton = document.querySelector(".prev-track");
 const PlayPauseButton = document.querySelector(".playpause-track");
 const nextButton = document.querySelector(".next-track");
+const InnerImage = document.getElementById("innerCircle");
 let random = Math.floor(Math.random() * 4);
 let i;
 i = random;
@@ -22,11 +23,18 @@ let currentsong = new Audio(`./music/audio${i}.mp3`);
 const play = () => {
   if (currentsong.paused || currentsong.currentTime == 0) {
     currentsong.play();
+    InnerImage.classList.add("Rotate");
   } else {
+    InnerImage.classList.remove("Rotate");
     currentsong.pause();
   }
+  
+
   songName.innerHTML = `<h4>${SongDetail[i].song}</h4>`;
   ArtistName.innerHTML = `<h4>${SongDetail[i].Artist}</h4>`;
+  InnerImage.style.backgroundImage=`url(./picture/Picture${i}.jpg)`; 
+
+  // InnerImage.style.background(`url(./picture/Picture${i}.jpg)`);
 };
 
 const prev = () => {
@@ -42,6 +50,8 @@ const prev = () => {
   currentsong.play();
   songName.innerHTML = `<h4>${SongDetail[i].song}</h4>`;
   ArtistName.innerHTML = `<h4>${SongDetail[i].Artist}</h4>`;
+  InnerImage.style.backgroundImage=`url(./picture/Picture${i}.jpg)`; 
+
 };
 
 const next = () => {
@@ -55,8 +65,10 @@ const next = () => {
   }
   currentsong = new Audio(`./music/audio${i}.mp3`);
   currentsong.play();
-  ArtistName.innerHTML = `<h4>${SongDetail[i].Artist}</h4>`;
   songName.innerHTML = `<h4>${SongDetail[i].song}</h4>`;
+  ArtistName.innerHTML = `<h4>${SongDetail[i].Artist}</h4>`;
+  InnerImage.style.backgroundImage=`url(./picture/Picture${i}.jpg)`; 
+
 };
 
 //eventlistners
